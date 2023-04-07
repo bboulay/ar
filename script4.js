@@ -20,6 +20,7 @@ AFRAME.registerComponent('markerhandler', {
       const description = document.querySelector('.description_txt');
             
       const button = document.querySelector('button[data-action="close_fact"]');
+      div.style.display = "none";
       button.style.display = "none";
       description.style.display = "none";
             
@@ -27,6 +28,7 @@ AFRAME.registerComponent('markerhandler', {
             div.innerText = "";
             description.innerText = "";
             button.innerText="";
+            div.style.display = "none";
             button.style.display = "none";
             description.style.display = "none";
         });
@@ -48,6 +50,7 @@ AFRAME.registerComponent('markerhandler', {
         description.appendChild(elem_img);
         var elem_txt = document.createTextNode(objects[marker.id].description);
         description.appendChild(elem_txt);
+        div.style.display = "block";
         button.style.display = "block";
         description.style.display = "block";
 
