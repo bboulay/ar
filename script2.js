@@ -22,6 +22,13 @@ function staticLoadPlaces() {
                 lng: 24.638924,
             },
         },
+        {
+            name: 'object3',
+            location: {
+                lat: 60.150962,
+                lng: 24.638698,
+            },
+        },
     ];
 }
 
