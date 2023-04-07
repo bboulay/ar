@@ -9,6 +9,17 @@
 
     <script src="./script4.js"></script>
     
+        <script>
+  AFRAME.registerComponent('markerhandler', {
+    init: function () {
+      this.el.sceneEl.addEventListener('markerFound', () => {
+        const div = document.querySelector('.instructions');
+        div.innerText = "object1"
+      })
+    }
+  });
+</script>
+    
  
     <link rel="stylesheet" type="text/css" href="./style4.css"/>
 
