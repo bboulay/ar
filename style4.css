@@ -26,6 +26,7 @@ button {
 
 .instructions {
     height: 5%;
+    text-align: center;
     top: 5%;
     font-size: 1.25em;
     color: white;
@@ -55,4 +56,3 @@ button {
     width: 50%;
     border-radius: 50%;
 }
-
