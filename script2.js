@@ -9,24 +9,24 @@ window.onload = () => {
 function staticLoadPlaces() {
     return [
         {
-            name: 'object1',
+            name: 'office',
             location: {
-                lat: 60.150917,
-                lng: 24.638699,
+                lat: 60.15096294660794,
+                lng: 24.63873891829573,
             },
         },
        {
-            name: 'object2',
+            name: 'bedroom',
             location: {
-                lat: 60.151035,
-                lng: 24.638924,
+                lat: 60.15098426455627,
+                lng: 24.63869197963797,
             },
         },
         {
-            name: 'object3',
+            name: 'balcony',
             location: {
-                lat: 60.150962,
-                lng: 24.638698,
+                lat: 60.15090024422584,
+                lng: 24.638603466740477,
             },
         },
     ];
