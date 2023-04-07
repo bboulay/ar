@@ -45,7 +45,7 @@ AFRAME.registerComponent('markerhandler', {
         var elem_txt = document.createTextNode(objects[marker.id].description);
         description.appendChild(elem_txt);
 
-      }),
+      })
       //marker.addEventListener('markerLost', () => {
       //  div.innerText = "";
       //  description.innerText = "";
