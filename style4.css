@@ -30,6 +30,7 @@ button {
     top: 5%;
     font-size: 1.25em;
     color: white;
+    background-color:rgba(0, 0, 0, 0.4); 
     z-index: 999999;
 }
 
@@ -39,7 +40,9 @@ button {
     font-size: 1.25em;
     color: white;
     margin: 0 2% auto 2%;
-    background-color:rgba(0, 0, 0, 0.5); 
+    background-color:rgba(0, 0, 0, 0.4); 
+    min-height: 100px;
+    overflow: hidden;
     z-index: 999999;
 }
 
