@@ -49,7 +49,6 @@ AFRAME.registerComponent('markerhandler', {
       //marker.addEventListener('markerLost', () => {
       //  div.innerText = "";
       //  description.innerText = "";
-       
-      })
+      //})
     }
   });
