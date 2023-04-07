@@ -21,8 +21,8 @@ AFRAME.registerComponent('markerhandler', {
       const description_image = document.querySelector('.description_image');
       
       marker.addEventListener('markerFound', () => {
-        div.innerText = marker.id;
-        description.innerText = marker.id;
+        div.innerText = objects[marker.id].name;
+        description.innerText = objects[marker.id].description;
         //description.innerText = objects[marker.id].description;
         //description_image.innerText = objects[marker.id].description_image;
       }),
