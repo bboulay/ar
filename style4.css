@@ -1,5 +1,4 @@
 .centered {
-    height: 20%;
     justify-content: center;
     position: fixed;
     bottom: 0%;
@@ -26,6 +25,7 @@ button {
 }
 
 .instructions {
+    height: 20%;
     position: fixed;
     top: 5%;
     font-size: 1.25em;
