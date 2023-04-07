@@ -1,8 +1,8 @@
 // var objects = {};
-// objects['5'] = {name: 'object5', 
+// objects['object5'] = {name: 'object5', 
 //                 description: 'babllasdlhfhl has sahdfljdh al aldsflkhasdf  öskjdafö ndsöjf öd önsdaö föj aösdfjö as', 
 //                 description_image: 'image/object5.png'};
-// objects['6'] = {name: 'object6', 
+// objects['object6'] = {name: 'object6', 
 //                 description: 'mbvnfbmn nw v mdfg ndfl lmnfdfdsg dfsg gh kklasd ll lasas dsafj asfj jfaja joffofoff asdf', 
 //                 description_image: 'image/object6.png'};
         
@@ -17,10 +17,10 @@ AFRAME.registerComponent('markerhandler', {
       const description_image = document.querySelector('description_image');
       
       marker.addEventListener('markerFound', () => {
-        div.innerText = marker.value;
+        div.innerText = marker.id;
         description.innerText = marker.id;
-        //description.innerText = objects[marker.value].description;
-        //description_image.innerText = objects[marker.value].description_image;
+        //description.innerText = objects[marker.id].description;
+        //description_image.innerText = objects[marker.id].description_image;
       }),
       marker.addEventListener('markerLost', () => {
         div.innerText = "";
