@@ -21,7 +21,6 @@ AFRAME.registerComponent('markerhandler', {
       const description_image = document.querySelector('.description_image');
             
       const button = document.querySelector('button[data-action="close_fact"]');
-      button.innerText = 'X';
             
       button.addEventListener('click', function () {
             div.innerText = "";
@@ -38,6 +37,8 @@ AFRAME.registerComponent('markerhandler', {
       //description.appendChild(elem_txt);
       
       marker.addEventListener('markerFound', () => {
+        button.innerText = 'X';
+              
         div.innerText = objects[marker.id].name;
         var elem_img = document.createElement("img");
         elem_img.src = objects[marker.id].description_image;
