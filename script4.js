@@ -18,8 +18,9 @@ AFRAME.registerComponent('markerhandler', {
       
       marker.addEventListener('markerFound', () => {
         div.innerText = marker.id;
-        description.innerText = objects[marker.value].description;
-        description_image.innerText = objects[marker.value].description_image;
+        description.innerText = marker.value;
+        //description.innerText = objects[marker.value].description;
+        //description_image.innerText = objects[marker.value].description_image;
       }),
       marker.addEventListener('markerLost', () => {
         div.innerText = "";
