@@ -43,7 +43,7 @@ AFRAME.registerComponent('markerhandler', {
       
       marker.addEventListener('markerFound', () => {
         button.innerText = 'X';
-              
+        description.innerText = "";     
         div.innerText = objects[marker.id].name;
         var elem_img = document.createElement("img");
         elem_img.src = objects[marker.id].description_image;
