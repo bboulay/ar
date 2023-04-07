@@ -24,7 +24,7 @@ AFRAME.registerComponent('markerhandler', {
       div.innerText = objects['object5'].name;
       description.innerText = objects['object5'].description;
       var elem = document.createElement("img");
-      elem.src = objects'object5].description_image;
+      elem.src = objects['object5].description_image;
       description_image.appendChild(elem)
       
       marker.addEventListener('markerFound', () => {
