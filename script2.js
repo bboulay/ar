@@ -63,6 +63,10 @@ function renderPlaces(places) {
                     placeText.setAttribute('title', place.name);
                     placeText.setAttribute('scale', '15 15 15');
         
+        placeText.addEventListener('loaded', () => {
+                        window.dispatchEvent(new CustomEvent('gps-entity-place-loaded'))
+                    });
+        
         scene.appendChild(placeText);
 
         setModel(models[modelIndex], model);
