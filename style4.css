@@ -43,14 +43,25 @@ button {
     position: fixed;
     top: 5%;
     font-size: 1.25em;
-    color: white;
+    color: red;
     z-index: 999999;
 }
 
 .description_txt {
+    flex-direction: row;
     position: fixed;
+    text-align: justify;
     top: 10%;
     font-size: 1.25em;
-    color: white;
+    color: blue;
     z-index: 999999;
+    background: yellow;
+}
+
+.description_txt img{
+    display: block;
+    float: left;
+    width: 50%;
+    background: red;
+    border-radius: 50%;
 }
