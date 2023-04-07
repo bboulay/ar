@@ -44,8 +44,6 @@ button {
     margin: 0 2% 2%;
     padding: 2%;
     background-color:rgba(0, 0, 0, 0.4); 
-    min-height: 100px;
-    overflow: hidden;
     z-index: 999999;
 }
 
