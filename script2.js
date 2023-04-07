@@ -1,7 +1,5 @@
 window.onload = () => {
-    const button = document.querySelector('button[data-action="change"]');
-    button.innerText = '﹖';
-
+    
     let places = staticLoadPlaces();
     renderPlaces(places);
 };
@@ -33,23 +31,6 @@ function staticLoadPlaces() {
 }
 
 
-var models = [
-    {
-        info: 'Magnemite, Lv. 5, HP 10/10',
-    },
-    {
-        info: 'Articuno, Lv. 80, HP 100/100',
-    },
-    {
-        info: 'Dragonite, Lv. 99, HP 150/150',
-    },
-];
-
-var modelIndex = 0;
-var setModel = function (model, entity) {
-    const div = document.querySelector('.instructions');
-    div.innerText = model.info;
-};
 
 function renderPlaces(places) {
     let scene = document.querySelector('a-scene');
@@ -68,16 +49,5 @@ function renderPlaces(places) {
                     });
         
         scene.appendChild(placeText);
-
-        setModel(models[modelIndex], model);
-
-        document.querySelector('button[data-action="change"]').addEventListener('click', function () {
-            var entity = document.querySelector('[gps-entity-place]');
-            modelIndex++;
-            var newIndex = modelIndex % models.length;
-            setModel(models[newIndex], entity);
-        });
-
-        scene.appendChild(model);
     });
 }
