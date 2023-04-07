@@ -25,7 +25,7 @@ AFRAME.registerComponent('markerhandler', {
       description.innerText = objects['object5'].description;
       var elem = document.createElement("img");
       elem.src = objects['object5'].description_image;
-      description.appendChild("elem")
+      description.appendChild(elem)
       
       marker.addEventListener('markerFound', () => {
         div.innerText = objects[marker.id].name;
