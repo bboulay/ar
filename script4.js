@@ -13,8 +13,8 @@ AFRAME.registerComponent('markerhandler', {
       
       const marker = this.el;
       const div = document.querySelector('.instructions');
-      const description = document.querySelector('description');
-      const description_image = document.querySelector('description_image');
+      const description = document.querySelector('.description_txt');
+      const description_image = document.querySelector('.description_image');
       
       marker.addEventListener('markerFound', () => {
         div.innerText = marker.id;
