@@ -18,14 +18,17 @@ AFRAME.registerComponent('markerhandler', {
       const marker = this.el;
       const div = document.querySelector('.instructions');
       const description = document.querySelector('.description_txt');
-      const description_image = document.querySelector('.description_image');
             
       const button = document.querySelector('button[data-action="close_fact"]');
+      button.style.display = "none";
+      description..style.display = "none";
             
       button.addEventListener('click', function () {
             div.innerText = "";
             description.innerText = "";
             button.innerText="";
+            button.style.display = "none";
+            description..style.display = "none";
         });
       
       // test display
@@ -45,6 +48,8 @@ AFRAME.registerComponent('markerhandler', {
         description.appendChild(elem_img);
         var elem_txt = document.createTextNode(objects[marker.id].description);
         description.appendChild(elem_txt);
+        button.style.display = "block";
+        description..style.display = "block";
 
       })
       //marker.addEventListener('markerLost', () => {
