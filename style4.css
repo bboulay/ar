@@ -54,6 +54,7 @@ button {
     top: 10%;
     font-size: 1.25em;
     color: blue;
+    margin: 0 2% auto 2%;
     z-index: 999999;
     background: yellow;
 }
