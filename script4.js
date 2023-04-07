@@ -23,9 +23,11 @@ AFRAME.registerComponent('markerhandler', {
       // test display
       div.innerText = objects['object5'].name;
       description.innerText = objects['object5'].description;
-      var elem = document.createElement("img");
-      elem.src = objects['object5'].description_image;
-      description_image.appendChild(elem)
+      var elem_img = document.createElement("img");
+      elem_img.src = objects['object5'].description_image;
+      description_txt.appendChild(elem_img);
+      var elem_txt = document.createTextNode(objects['object5'].description);
+      description_txt.appendChild(elem_txt);
       
       marker.addEventListener('markerFound', () => {
         var elem = document.createElement("img");
