@@ -12,17 +12,28 @@
         <script>
   AFRAME.registerComponent('markerhandler', {
     init: function () {
+      var objects = {};
+      objects[5] = {name='object5', description='babllasdlhfhl has sahdfljdh al aldsflkhasdf  öskjdafö ndsöjf öd önsdaö föj aösdfjö as', description_image='image/object5.png'};
+      objects[6] = {name='object6', description='mbvnfbmn nw v mdfg ndfl lmnfdfdsg dfsg gh kklasd ll lasas dsafj asfj jfaja joffofoff asdf', description_image='image/object6.png'};
+        
       const marker = this.el;
       const div = document.querySelector('.instructions');
+      const description = document.querySelector('description');
+      const description_image = document.querySelector('description_image');
+      
       marker.addEventListener('markerFound', (e) => {
-        div.innerText = marker.id
+        div.innerText = objects[marker.value].name;
+        description.innerText = objects[marker.value].description;
+        description_image.innerText = objects[marker.value].description_image;
       }),
       marker.addEventListener('markerLost', (e) => {
-        div.innerText = ""
+        div.innerText = "";
+        description.innerText = "";
+        description_image.innerText = "";
       })
     }
-     
   });
+                   
 </script>
     
  
@@ -30,6 +41,10 @@
 
     <body style='margin : 0px; overflow: hidden;'>
         <div class="centered instructions"></div>
+        
+        <div class="description"></div>
+        
+        <div class="description_image"></div>
         
         <!-- we add detectionMode and matrixCodeType to tell AR.js to recognize barcode markers -->
         <a-scene embedded vr-mode-ui="enabled: false" arjs='sourceType: webcam; debugUIEnabled: false; detectionMode: mono_and_matrix; matrixCodeType: 3x3;'>
