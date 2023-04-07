@@ -29,11 +29,12 @@ AFRAME.registerComponent('markerhandler', {
       description.appendChild(elem_txt);
       
       marker.addEventListener('markerFound', () => {
-        var elem = document.createElement("img");
-        elem.src = objects[marker.id].description_image;
-        description_image.appendChild(elem)
         div.innerText = objects[marker.id].name;
-        description.innerText =  objects[marker.id].description;
+        var elem_img = document.createElement("img");
+        elem_img.src = objects[marker.id].description_image;
+        description.appendChild(elem_img);
+        var elem_txt = document.createTextNode(objects[marker.id].description);
+        description.appendChild(elem_txt);
 
       }),
       marker.addEventListener('markerLost', () => {
