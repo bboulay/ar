@@ -25,11 +25,13 @@ button {
 }
 
 .instructions {
-    height: 20%;
+    height: 5%;
     position: fixed;
     top: 5%;
     font-size: 1.25em;
     color: white;
+    margin: 0 2% 2%;
+    font-weight: bold;
     background-color:rgba(0, 0, 0, 0.4); 
     z-index: 999999;
 }
@@ -39,7 +41,8 @@ button {
     top: 10%;
     font-size: 1.25em;
     color: white;
-    margin: 0 2% auto 2%;
+    margin: 0 2% 2%;
+    padding: 2%;
     background-color:rgba(0, 0, 0, 0.4); 
     min-height: 100px;
     overflow: hidden;
@@ -53,3 +56,4 @@ button {
     width: 50%;
     border-radius: 50%;
 }
+
