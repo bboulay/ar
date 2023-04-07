@@ -21,14 +21,14 @@ AFRAME.registerComponent('markerhandler', {
             
       const button = document.querySelector('button[data-action="close_fact"]');
       button.style.display = "none";
-      description..style.display = "none";
+      description.style.display = "none";
             
       button.addEventListener('click', function () {
             div.innerText = "";
             description.innerText = "";
             button.innerText="";
             button.style.display = "none";
-            description..style.display = "none";
+            description.style.display = "none";
         });
       
       // test display
@@ -49,7 +49,7 @@ AFRAME.registerComponent('markerhandler', {
         var elem_txt = document.createTextNode(objects[marker.id].description);
         description.appendChild(elem_txt);
         button.style.display = "block";
-        description..style.display = "block";
+        description.style.display = "block";
 
       })
       //marker.addEventListener('markerLost', () => {
