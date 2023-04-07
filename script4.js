@@ -19,6 +19,15 @@ AFRAME.registerComponent('markerhandler', {
       const div = document.querySelector('.instructions');
       const description = document.querySelector('.description_txt');
       const description_image = document.querySelector('.description_image');
+            
+      const button = document.querySelector('button[data-action="close_fact"]');
+      button.innerText = 'X';
+            
+      button.addEventListener('click', function () {
+            div.innerText = "";
+            description.innerText = "";
+            button.innerText="";
+        });
       
       // test display
       //div.innerText = objects['object5'].name;
@@ -37,10 +46,10 @@ AFRAME.registerComponent('markerhandler', {
         description.appendChild(elem_txt);
 
       }),
-      marker.addEventListener('markerLost', () => {
-        div.innerText = "";
-        description.innerText = "";
-        description_image.innerText = "";
+      //marker.addEventListener('markerLost', () => {
+      //  div.innerText = "";
+      //  description.innerText = "";
+       
       })
     }
   });
