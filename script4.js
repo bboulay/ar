@@ -1,12 +1,12 @@
 var objects = {};
 objects['object5'] = {
         name: 'object5', 
-        description: 'babllasdlhfhl has sahdfljdh al aldsflkhasdf  öskjdafö ndsöjf öd önsdaö föj aösdfjö as', 
+        description: 'long description for the object 5, that can take several lines and even more', 
         description_image: 'image/object5.png'
 };
 objects['object6'] = {
         name: 'object6', 
-        description: 'mbvnfbmn nw v mdfg ndfl lmnfdfdsg dfsg gh kklasd ll lasas dsafj asfj jfaja joffofoff asdf', 
+        description: 'long description for the object 6, that can take several lines and even more', 
         description_image: 'image/object6.png'
 };
         
