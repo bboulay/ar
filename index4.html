@@ -12,12 +12,12 @@
         <script>
   AFRAME.registerComponent('markerhandler', {
     init: function () {
-      this.el.addEventListener('markerFound', (e) => {
-        const div = document.querySelector('.instructions');
-        div.innerText = this.value
+      const marker = this.el;
+      const div = document.querySelector('.instructions');
+      marker.addEventListener('markerFound', (e) => {
+        div.innerText = marker.id
       }),
-      this.el.addEventListener('markerLost', (e) => {
-        const div = document.querySelector('.instructions');
+      marker.addEventListener('markerLost', (e) => {
         div.innerText = ""
       })
     }
