@@ -22,14 +22,17 @@ AFRAME.registerComponent('markerhandler', {
       
       // test display
       div.innerText = objects['object5'].name;
-      description.innerText = '<img src=' +  objects['object5'].description_image + '>' + objects['object5'].description;
+      description.innerText = objects['object5'].description;
+      var elem = document.createElement("img");
+      elem.src = objects'object5].description_image;
+      description_image.appendChild(elem)
       
       marker.addEventListener('markerFound', () => {
         var elem = document.createElement("img");
         elem.src = objects[marker.id].description_image;
-        description.appendChild(elem)
+        description_image.appendChild(elem)
         div.innerText = objects[marker.id].name;
-        description.innerText = '<img src=' +  objects[marker.id].description_image + '>' + objects[marker.id].description;
+        description.innerText =  objects[marker.id].description;
 
       }),
       marker.addEventListener('markerLost', () => {
