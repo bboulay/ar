@@ -61,12 +61,14 @@ var objects = {};
 objects['object5'] = {
         name: 'object5', 
         description: 'long description for the object 5, that can take several lines and even more long description for the object 5, that can take several lines and even more long description for the object 5, that can take several lines and even more long description for the object 5, that can take several lines and even more', 
-        description_image: './5.png'
+        description_image: './5.png',
+	found = false
 };
 objects['object6'] = {
         name: 'object6', 
         description: 'long description for the object 6, that can take several lines and even more', 
-        description_image: './06-barcode.png'
+        description_image: './06-barcode.png',
+	found = false
 };
         
 function deleteScene() {
@@ -146,6 +148,7 @@ AFRAME.registerComponent('markerhandler', {
         button_close_fact.innerText = 'X';
         description.innerText = "";     
         name.innerText = objects[marker.id].name;
+	objects[marker.id].found = true;
         var elem_img = document.createElement("img");
         elem_img.src = objects[marker.id].description_image;
         description.appendChild(elem_img);
