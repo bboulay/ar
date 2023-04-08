@@ -78,7 +78,7 @@ AFRAME.registerComponent('markerhandler', {
         button_close_fact.style.display = "block";
         description.style.display = "block";
 
-      })
+      });
       //marker.addEventListener('markerLost', () => {
       //  div.innerText = "";
       //  description.innerText = "";
