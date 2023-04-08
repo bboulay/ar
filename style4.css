@@ -79,3 +79,24 @@ button {
     width: 50%;
     border-radius: 50%;
 }
+
+.progress{
+    color: blue;
+    width: 90%;
+    height: 2%;
+    margin: 0% 2% 2% 0%;
+    background: red;
+    #background-color: rgba(0, 0, 0, 0.4); 
+    display: block;
+    position: relative;
+    border-radius: 10px;
+}
+
+.progress span{
+    justify-content: left;
+ 
+    color: green;
+    width: 35%;
+    background: green;
+    #background-color: rgba(0, 0, 0, 0.4); 
+}
