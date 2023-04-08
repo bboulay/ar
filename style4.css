@@ -39,7 +39,24 @@ button {
 
 .map{
     width: 100%;
-    height: 100%;
+    height: 90%;
+    justify-content: center;
+    position: fixed;
+    bottom: 10%;
+    display: flex;
+    flex-direction: row;
+    margin: 0px auto;
+    left: 0;
+    right: 0;
+}
+
+.map img{
+    display: block;
+    max-width:100%;
+    max-height:100%;
+    height:100%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .description_txt {
