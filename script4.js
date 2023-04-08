@@ -2,11 +2,12 @@ window.onload = () => {
      const marker = this.el;
       const name = document.querySelector('.instructions');
       const description = document.querySelector('.description_txt');
+      const map = = document.querySelector('.map');
             
       const button_close_fact = document.getElementById('close_fact');
       const button_camera_map = document.getElementById('camera_map');
       const button_language = document.getElementById('language');      
-      
+      name.style.display = "none";
       description.style.display = "none";
       button_close_fact.style.display = "none"; 
       button_camera_map.innerText="C";
@@ -16,8 +17,8 @@ window.onload = () => {
      
      var elem_img = document.createElement("img");
      elem_img.src = "./kiasma.png";
-     name.appendChild(elem_img);
-     name.style.display = "block";
+     map.appendChild(elem_img);
+     map.style.display = "block";
             
       button_close_fact.addEventListener('click', function () {
             name.innerText = "";
@@ -32,20 +33,20 @@ window.onload = () => {
             // switch between map and camera
             event.preventDefault();
             // switch between map and camera
-            alert(event.target.tagName);
-            //if (e.target.tagName !== "INPUT") return;
-            //alert("click on camera/map button");
+            
             current_select = button_camera_map.innerText;
-            alert(current_select);
+            
             current_select = button_camera_map.innerText;
             if (current_select == "C") {
-                    // enable camera
-                    button_camera_map.innerText = "M";
+                 // enable camera
+                 button_camera_map.innerText = "M";
+                 map.style.display = "none";
             }
             else {
-                    // disable camera
-                    // enable map
-                    button_camera_map.innerText = "C";
+                 // disable camera
+                 // enable map
+                 map.style.display = "block";
+                 button_camera_map.innerText = "C";
             }
         });
             
