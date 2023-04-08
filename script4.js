@@ -19,18 +19,42 @@ AFRAME.registerComponent('markerhandler', {
       const div = document.querySelector('.instructions');
       const description = document.querySelector('.description_txt');
             
-      const button = document.querySelector('button[data-action="close_fact"]');
+      const button_close_fact = document.querySelector('button[data-action="close_fact"]');
+      const button_camera_map = document.querySelector('button[data-action="camera_map"]');
+      const button_language = document.querySelector('button[data-action="language"]');      
       div.style.display = "none";
-      button.style.display = "none";
       description.style.display = "none";
+      button_close_fact.style.display = "none"; 
+      button_camera_map.innerText="C";
+      button_camera_map.style.display = "block";
+      button_language.innerText = "L";
+      button_language.style.display = "block";
             
-      button.addEventListener('click', function () {
+      button_close_fact.addEventListener('click', function () {
             div.innerText = "";
             description.innerText = "";
             button.innerText="";
             div.style.display = "none";
-            button.style.display = "none";
+            button_close_fact.style.display = "none";
             description.style.display = "none";
+        });
+            
+      button_camera_map.addEventListener('click', function () {
+            // switch between map and camera
+            current_select = button_camera_map.innerText;
+            if (current_select == "C") {
+                    // enable camera
+                    button_camera_map.innerText = "M";
+            }
+            else {
+                    // disable camera
+                    // enable map
+                    button_camera_map.innerText = "C";
+            }
+        });
+            
+      button_language.addEventListener('click', function () {
+            
         });
       
       // test display
@@ -42,7 +66,7 @@ AFRAME.registerComponent('markerhandler', {
       //description.appendChild(elem_txt);
       
       marker.addEventListener('markerFound', () => {
-        button.innerText = 'X';
+        button_close_fact.innerText = 'X';
         description.innerText = "";     
         div.innerText = objects[marker.id].name;
         var elem_img = document.createElement("img");
@@ -51,7 +75,7 @@ AFRAME.registerComponent('markerhandler', {
         var elem_txt = document.createTextNode(objects[marker.id].description);
         description.appendChild(elem_txt);
         div.style.display = "block";
-        button.style.display = "block";
+        button_close_fact.style.display = "block";
         description.style.display = "block";
 
       })
