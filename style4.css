@@ -98,7 +98,7 @@ button {
     z-index: 999999;
 }
 
-.progress span{
+.progress .progress_bar{
     color: white;
     width: 35%;
     background: green;
