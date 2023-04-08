@@ -57,7 +57,6 @@ window.onload = () => {
 };
 
 
-
 var objects = {};
 objects['object5'] = {
         name: 'object5', 
@@ -85,6 +84,36 @@ function deleteScene() {
 function addScene() {
     
 }
+
+
+function addMarkers() {
+    var scene = document.querySelector('a-scene');
+    for (let m in objects) {
+        var marker_object = document.createElement('a-marker');
+        marker_object.setAttribute('markerhandler','');
+        marker_object.setAttribute('emitevents', true);
+        marker_object.setAttribute('cursor', 'rayOrigin: mouse');
+        marker_object.setAttribute('id', 'object' + objects[m].value);
+        marker_object.setAttribute('type','barcode');
+        marker_object.setAttribute('value', objects[m].value);
+        
+        var object_visual = document.createElement('a-box');
+        object_visual.setAttribute('position', '0 0.5 0');
+        object_visual.setAttribute('color', objects[m].color);
+        
+        marker_object.appendChild(object_visual);
+        scene.appendChild(marker_object);
+    }
+}
+
+
+AFRAME.registerComponent('markers_start',{
+	init:function(){
+	    addMarkers();
+
+	}
+});
+
 
 AFRAME.registerComponent('markerhandler', {
     init: function () {
