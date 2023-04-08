@@ -2,7 +2,7 @@ window.onload = () => {
      const marker = this.el;
       const name = document.querySelector('.instructions');
       const description = document.querySelector('.description_txt');
-      const map = = document.querySelector('.map');
+      const map = document.querySelector('.map');
             
       const button_close_fact = document.getElementById('close_fact');
       const button_camera_map = document.getElementById('camera_map');
