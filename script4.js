@@ -39,23 +39,23 @@ AFRAME.registerComponent('markerhandler', {
             description.style.display = "none";
         });
             
-      //button_camera_map.addEventListener('click', function () {
-      //      // switch between map and camera
-      //      current_select = button_camera_map.innerText;
-      //      if (current_select == "C") {
-      //              // enable camera
-      //              button_camera_map.innerText = "M";
-      //      }
-      //      else {
-      //              // disable camera
-      //              // enable map
-      //              button_camera_map.innerText = "C";
-      //      }
-      //  });
+      button_camera_map.addEventListener('click', function () {
+            // switch between map and camera
+            current_select = button_camera_map.innerText;
+            if (current_select == "C") {
+                    // enable camera
+                    button_camera_map.innerText = "M";
+            }
+            else {
+                    // disable camera
+                    // enable map
+                    button_camera_map.innerText = "C";
+            }
+        });
             
-      //button_language.addEventListener('click', function () {
-      //      
-      //  });
+      button_language.addEventListener('click', function () {
+            
+        });
       
       // test display
       //name.innerText = objects['object5'].name;
