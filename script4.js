@@ -101,6 +101,8 @@ function computeProgress() {
 	progress_percentage = total_found/total_count*100;
 	progress_text = total_found+'/'+total_count;
 	
+	progress_percentage = Math.max(10, progress_percentage);
+	
 	progress_span = document.getElementById('progress_bar');
 	progress_span.inner_text = progress_text;
 	progress_span.style.width=progress_percentage+'%';
