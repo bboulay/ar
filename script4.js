@@ -1,5 +1,5 @@
 window.onload = () => {
-     const marker = this.el;
+      const marker = this.el;
       const name = document.querySelector('.instructions');
       const description = document.querySelector('.description_txt');
       const map = document.querySelector('.map');
@@ -18,6 +18,8 @@ window.onload = () => {
       elem_img.src = "./kiasma.png";
       map.appendChild(elem_img);
       map.style.display = "block";
+	
+      computeProgress();
             
       button_close_fact.addEventListener('click', function () {
             name.innerText = "";
@@ -85,6 +87,23 @@ function deleteScene() {
 
 function addScene() {
     
+}
+
+function computeProgress() {
+	total_object = 0;
+	total_found = 0;
+	for (let m in objects) {
+		total_object +=1;
+		if (objects[m].found) {
+			total_found += 1;	
+		}
+	}
+	progress_percentage = total_found/total_count*100;
+	progress_text = total_found+'/'+total_count;
+	
+	progress_span = document.getElementById('progress_bar');
+	progress_span.inner_text = progress_text;
+	progress_span.style.width=progress_percentage+'%';
 }
 
 
@@ -157,6 +176,8 @@ AFRAME.registerComponent('markerhandler', {
         name.style.display = "block";
         button_close_fact.style.display = "block";
         description.style.display = "block";
+	
+	computeProgress();
 
       });
       //marker.addEventListener('markerLost', () => {
