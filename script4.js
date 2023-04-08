@@ -30,14 +30,7 @@ AFRAME.registerComponent('markerhandler', {
       button_language.innerText = "L";
       button_language.style.display = "block";
             
-      button_close_fact.addEventListener('click', function (event) {
-            event.preventDefault();
-            // switch between map and camera
-            alert(event.target.tagName);
-            //if (e.target.tagName !== "INPUT") return;
-            //alert("click on camera/map button");
-            current_select = button_camera_map.innerText;
-            alert(current_select);
+      button_close_fact.addEventListener('click', function () {
             name.innerText = "";
             description.innerText = "";
             button_close_fact.innerText="";
@@ -46,8 +39,15 @@ AFRAME.registerComponent('markerhandler', {
             description.style.display = "none";
         });
             
-      button_camera_map.addEventListener('click', function () {
+      button_camera_map.addEventListener('click', function (event) {
             // switch between map and camera
+            event.preventDefault();
+            // switch between map and camera
+            alert(event.target.tagName);
+            //if (e.target.tagName !== "INPUT") return;
+            //alert("click on camera/map button");
+            current_select = button_camera_map.innerText;
+            alert(current_select);
             current_select = button_camera_map.innerText;
             if (current_select == "C") {
                     // enable camera
