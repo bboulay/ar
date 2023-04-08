@@ -1,21 +1,5 @@
-var objects = {};
-objects['object5'] = {
-        name: 'object5', 
-        description: 'long description for the object 5, that can take several lines and even more long description for the object 5, that can take several lines and even more long description for the object 5, that can take several lines and even more long description for the object 5, that can take several lines and even more', 
-        description_image: './5.png'
-};
-objects['object6'] = {
-        name: 'object6', 
-        description: 'long description for the object 6, that can take several lines and even more', 
-        description_image: './06-barcode.png'
-};
-        
-
-
-AFRAME.registerComponent('markerhandler', {
-    init: function () {
-      
-      const marker = this.el;
+window.onload = () => {
+     const marker = this.el;
       const name = document.querySelector('.instructions');
       const description = document.querySelector('.description_txt');
             
@@ -64,6 +48,44 @@ AFRAME.registerComponent('markerhandler', {
             
         });
       
+    
+};
+
+
+
+var objects = {};
+objects['object5'] = {
+        name: 'object5', 
+        description: 'long description for the object 5, that can take several lines and even more long description for the object 5, that can take several lines and even more long description for the object 5, that can take several lines and even more long description for the object 5, that can take several lines and even more', 
+        description_image: './5.png'
+};
+objects['object6'] = {
+        name: 'object6', 
+        description: 'long description for the object 6, that can take several lines and even more', 
+        description_image: './06-barcode.png'
+};
+        
+
+
+AFRAME.registerComponent('markerhandler', {
+    init: function () {
+      
+      const marker = this.el;
+      const name = document.querySelector('.instructions');
+      const description = document.querySelector('.description_txt');
+            
+      const button_close_fact = document.getElementById('close_fact');
+      const button_camera_map = document.getElementById('camera_map');
+      const button_language = document.getElementById('language');      
+      name.style.display = "none";
+      description.style.display = "none";
+      button_close_fact.style.display = "none"; 
+      button_camera_map.innerText="C";
+      button_camera_map.style.display = "block";
+      button_language.innerText = "L";
+      button_language.style.display = "block";
+            
+               
       // test display
       //name.innerText = objects['object5'].name;
       //var elem_img = document.createElement("img");
