@@ -14,7 +14,9 @@ window.onload = () => {
       button_camera_map.style.display = "block";
       button_language.innerText = "L";
       button_language.style.display = "block";
-     
+      var elem_img = document.createElement("img");
+      elem_img.src = "./kiasma.png";
+      map.appendChild(elem_img);
       map.style.display = "block";
             
       button_close_fact.addEventListener('click', function () {
