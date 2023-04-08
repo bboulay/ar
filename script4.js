@@ -70,7 +70,21 @@ objects['object6'] = {
         description_image: './06-barcode.png'
 };
         
+function deleteScene() {
+    var scene = document.querySelector('a-scene');
+    if (scene) {
+        alert("remove scene " +scene.id);
+        scene.parentNode.removeChild(scene);
+        if (scene.renderer) {
+            scene.renderer.dispose();
+        }
+    }
+    
+}
 
+function addScene() {
+    
+}
 
 AFRAME.registerComponent('markerhandler', {
     init: function () {
