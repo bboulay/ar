@@ -6,13 +6,18 @@ window.onload = () => {
       const button_close_fact = document.getElementById('close_fact');
       const button_camera_map = document.getElementById('camera_map');
       const button_language = document.getElementById('language');      
-      name.style.display = "none";
+      
       description.style.display = "none";
       button_close_fact.style.display = "none"; 
       button_camera_map.innerText="C";
       button_camera_map.style.display = "block";
       button_language.innerText = "L";
       button_language.style.display = "block";
+     
+     var elem_img = document.createElement("img");
+     elem_img.src = "./kiasma.png";
+     name.appendChild(elem_img);
+     name.style.display = "block";
             
       button_close_fact.addEventListener('click', function () {
             name.innerText = "";
