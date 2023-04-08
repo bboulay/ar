@@ -22,7 +22,7 @@ AFRAME.registerComponent('markerhandler', {
       const button_close_fact = document.querySelector('button[data-action="close_fact"]');
       const button_camera_map = document.querySelector('button[data-action="camera_map"]');
       const button_language = document.querySelector('button[data-action="language"]');      
-      div.style.display = "none";
+      name.style.display = "none";
       description.style.display = "none";
       button_close_fact.style.display = "none"; 
       button_camera_map.innerText="C";
@@ -34,7 +34,7 @@ AFRAME.registerComponent('markerhandler', {
             name.innerText = "";
             description.innerText = "";
             button_close_fact.innerText="";
-            div.style.display = "none";
+            name.style.display = "none";
             button_close_fact.style.display = "none";
             description.style.display = "none";
         });
