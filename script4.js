@@ -103,9 +103,9 @@ function computeProgress() {
 	
 	progress_percentage = Math.max(10, progress_percentage);
 	
-	progress_span = document.getElementById('progress_bar');
-	progress_span.inner_text = progress_text;
-	progress_span.style.width=progress_percentage+'%';
+	progress_bar = document.getElementById('progress_bar');
+	progress_bar.inner_text = progress_text;
+	progress_bar.style.width=progress_percentage+'%';
 }
 
 
