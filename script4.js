@@ -16,7 +16,7 @@ AFRAME.registerComponent('markerhandler', {
     init: function () {
       
       const marker = this.el;
-      const div = document.querySelector('.instructions');
+      const name = document.querySelector('.instructions');
       const description = document.querySelector('.description_txt');
             
       const button_close_fact = document.querySelector('button[data-action="close_fact"]');
@@ -31,9 +31,9 @@ AFRAME.registerComponent('markerhandler', {
       button_language.style.display = "block";
             
       button_close_fact.addEventListener('click', function () {
-            div.innerText = "";
+            name.innerText = "";
             description.innerText = "";
-            button.innerText="";
+            button_close_fact.innerText="";
             div.style.display = "none";
             button_close_fact.style.display = "none";
             description.style.display = "none";
@@ -58,7 +58,7 @@ AFRAME.registerComponent('markerhandler', {
         });
       
       // test display
-      //div.innerText = objects['object5'].name;
+      //name.innerText = objects['object5'].name;
       //var elem_img = document.createElement("img");
       //elem_img.src = objects['object5'].description_image;
       //description.appendChild(elem_img);
@@ -68,19 +68,19 @@ AFRAME.registerComponent('markerhandler', {
       marker.addEventListener('markerFound', () => {
         button_close_fact.innerText = 'X';
         description.innerText = "";     
-        div.innerText = objects[marker.id].name;
+        name.innerText = objects[marker.id].name;
         var elem_img = document.createElement("img");
         elem_img.src = objects[marker.id].description_image;
         description.appendChild(elem_img);
         var elem_txt = document.createTextNode(objects[marker.id].description);
         description.appendChild(elem_txt);
-        div.style.display = "block";
+        name.style.display = "block";
         button_close_fact.style.display = "block";
         description.style.display = "block";
 
       });
       //marker.addEventListener('markerLost', () => {
-      //  div.innerText = "";
+      //  name.innerText = "";
       //  description.innerText = "";
       //})
     }
