@@ -98,8 +98,8 @@ function computeProgress() {
 			total_found += 1;	
 		}
 	}
-	progress_percentage = total_found/total_count*100;
-	progress_text = total_found+'/'+total_count;
+	progress_percentage = total_found/total_object*100;
+	progress_text = total_found+'/'+total_object;
 	
 	progress_percentage = Math.max(10, progress_percentage);
 	
