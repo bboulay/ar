@@ -19,9 +19,9 @@ AFRAME.registerComponent('markerhandler', {
       const name = document.querySelector('.instructions');
       const description = document.querySelector('.description_txt');
             
-      const button_close_fact = document.querySelector('button[data-action="close_fact"]');
-      const button_camera_map = document.querySelector('button[data-action="camera_map"]');
-      const button_language = document.querySelector('button[data-action="language"]');      
+      const button_close_fact = document.getElementById('close_fact');
+      const button_camera_map = document.getElementById('camera_map');
+      const button_language = document.getElementById('language');      
       name.style.display = "none";
       description.style.display = "none";
       button_close_fact.style.display = "none"; 
@@ -30,7 +30,14 @@ AFRAME.registerComponent('markerhandler', {
       button_language.innerText = "L";
       button_language.style.display = "block";
             
-      button_close_fact.addEventListener('click', function () {
+      button_close_fact.addEventListener('click', function (event) {
+            event.preventDefault();
+            // switch between map and camera
+            alert(event.target.tagName);
+            //if (e.target.tagName !== "INPUT") return;
+            //alert("click on camera/map button");
+            current_select = button_camera_map.innerText;
+            alert(current_select);
             name.innerText = "";
             description.innerText = "";
             button_close_fact.innerText="";
