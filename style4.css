@@ -37,6 +37,10 @@ button {
     z-index: 999999;
 }
 
+.instructions img{
+    height: 1800%;
+}
+
 .description_txt {
     display: block;
     top: 10%;
