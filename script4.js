@@ -62,13 +62,13 @@ objects['object5'] = {
         name: 'object5', 
         description: 'long description for the object 5, that can take several lines and even more long description for the object 5, that can take several lines and even more long description for the object 5, that can take several lines and even more long description for the object 5, that can take several lines and even more', 
         description_image: './5.png',
-	found = false
+	found: false
 };
 objects['object6'] = {
         name: 'object6', 
         description: 'long description for the object 6, that can take several lines and even more', 
         description_image: './06-barcode.png',
-	found = false
+	found: false
 };
         
 function deleteScene() {
